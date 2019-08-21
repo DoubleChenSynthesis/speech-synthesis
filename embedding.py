@@ -21,7 +21,7 @@ class EmbeddingLayer(tf.layers.Layer):
             embeddings *= self.hidden_size**0.5
             return embeddings
 
-def embedding(inputs,character_size,embedding_size,scope="embedding"):
+def embeding(inputs,character_size,embedding_size,scope="embedding"):
     #将character embedding
     embedding_layer = EmbeddingLayer(character_size,embedding_size,scope)
     return embedding_layer(inputs)
